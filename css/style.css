@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Staatliches', sans-serif;
+}
+
+body {
+  background-color: #1f1f1f;
+  height: 100dvh;
+}
+
+.container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-family: inherit;
+  color: orangered;
+  font-size: 10em;
+  margin: 0.4em auto;
+}
+
+input {
+  font-family: inherit;
+  width: 600px;
+  height: 80px;
+  border: 4px solid orangered;
+  border-radius: 1em;
+  background-color: transparent;
+  color: #fff;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  transition:
+    box-shadow 0.1s ease-out,
+    background-color 0.1s ease-out,
+    transform 0.1s ease-out;
+}
+
+input:focus {
+  outline: none;
+  background-color: #3c3836;
+  box-shadow: 0 0 24px 10px rgba(255, 69, 0, 0.6);
+  transform: scale(1.1);
+}
+
+.listItems {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  border: 2px solid orangered;
+  border-radius: 1em;
+  font-size: 2em;
+  background-color: #1f1f1f;
+  color: #fff;
+  font-family: inherit;
+  margin: 0.6rem;
+  padding: 0.8rem;
+  transition: transform 0.2s ease-out;
+}
+
+.rmvBtn {
+  font-size: 1em;
+  background-color: transparent;
+  border: none;
+  transition: transform 0.1s ease-out;
+}
+
+.rmvBtn:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}

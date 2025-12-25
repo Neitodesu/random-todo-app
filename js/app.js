@@ -2,8 +2,10 @@ const input = document.querySelector('.inputBox');
 const inputButton = document.querySelector('.inputButton');
 const listElem = document.querySelector('.listItems');
 
-inputButton.addEventListener('click', () => {
-  addItem();
+input.addEventListener('keydown', (e) => {
+  if (e.key == 'Enter') {
+    addItem();
+  }
 });
 
 const addItem = () => {
@@ -21,6 +23,9 @@ const addItem = () => {
   input.value = '';
 
   rmvBtn.addEventListener('click', () => {
-    listElem.removeChild(listItem);
+    listItem.style.transform = 'scale(0.2)';
+    setTimeout(() => {
+      listElem.removeChild(listItem);
+    }, 200);
   });
 };
